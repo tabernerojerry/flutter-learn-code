@@ -59,7 +59,7 @@ final sidebarItems = [
     ),
   ),
   SidebarItem(
-    title: 'Home',
+    title: 'Setting',
     background: LinearGradient(
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
