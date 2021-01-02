@@ -3,6 +3,7 @@ import 'package:learncode/components/home_screen_navbar.dart';
 import 'package:learncode/components/list/explore_course_list.dart';
 import 'package:learncode/components/list/recent_course_list.dart';
 import 'package:learncode/constants.dart';
+import 'package:learncode/screens/continue_watching_screen.dart';
 import 'package:learncode/screens/sidebar_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -125,6 +126,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 ],
               ),
             ),
+            ContinueWatchingScreen(),
             IgnorePointer(
               ignoring: sidebarHidden,
               child: Stack(
