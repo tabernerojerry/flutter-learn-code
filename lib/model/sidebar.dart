@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SidebarItem {
@@ -39,7 +42,7 @@ final sidebarItems = [
       ],
     ),
     icon: Icon(
-      Icons.library_books,
+      Platform.isAndroid ? Icons.library_books : CupertinoIcons.book_solid,
       color: Colors.white,
     ),
   ),
@@ -69,7 +72,7 @@ final sidebarItems = [
       ],
     ),
     icon: Icon(
-      Icons.settings,
+      Platform.isAndroid ? Icons.settings : CupertinoIcons.settings_solid,
       color: Colors.white,
     ),
   ),
