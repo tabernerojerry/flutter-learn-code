@@ -5,7 +5,7 @@ import 'package:learncode/model/course.dart';
 class RecentCourseCard extends StatelessWidget {
   RecentCourseCard({@required this.course});
 
-  Course course;
+  final Course course;
 
   @override
   Widget build(BuildContext context) {
