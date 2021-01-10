@@ -2,6 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:learncode/components/certificate_viewer.dart';
+import 'package:learncode/components/list/completed_courses_list.dart';
 import 'package:learncode/constants.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -219,6 +221,76 @@ class ProfileScreen extends StatelessWidget {
                   ],
                 ),
               ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                top: 32.0,
+                left: 20.0,
+                right: 20.0,
+                bottom: 12.0,
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Certificates",
+                        style: kHeadlineLabelStyle,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "See All",
+                            style: kSearchPlaceholderStyle,
+                          ),
+                          Icon(
+                            Icons.chevron_right,
+                            color: kSecondaryLabelColor,
+                          ),
+                        ],
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
+            CertificateViewer(),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 20.0,
+                right: 20.0,
+                bottom: 12.0,
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Completed Courses",
+                        style: kHeadlineLabelStyle,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "See All",
+                            style: kSearchPlaceholderStyle,
+                          ),
+                          Icon(
+                            Icons.chevron_right,
+                            color: kSecondaryLabelColor,
+                          ),
+                        ],
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
+            CompletedCoursesList(),
+            SizedBox(
+              height: 28.0,
             ),
           ],
         ),
