@@ -35,10 +35,13 @@ class HomeScreenNavBar extends StatelessWidget {
                 ),
               );
             },
-            child: CircleAvatar(
-              radius: 18.0,
-              backgroundImage: AssetImage(
-                'asset/images/profile.png',
+            child: Hero(
+              tag: 'profile',
+              child: CircleAvatar(
+                radius: 18.0,
+                backgroundImage: AssetImage(
+                  'asset/images/profile.png',
+                ),
               ),
             ),
           ),
