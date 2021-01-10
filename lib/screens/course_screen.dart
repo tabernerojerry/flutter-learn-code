@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:learncode/constants.dart';
 import 'package:learncode/model/course.dart';
@@ -135,8 +138,159 @@ class _CourseScreenState extends State<CourseScreen> {
                       ),
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 28.0),
+                    child: Container(
+                      padding: EdgeInsets.only(
+                        bottom: 13.5,
+                        top: 12.5,
+                        left: 20.5,
+                        right: 14.5,
+                      ),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(16.0),
+                          boxShadow: [
+                            BoxShadow(
+                              color: kShadowColor,
+                              blurRadius: 16.0,
+                              offset: Offset(0, 4),
+                            ),
+                          ]),
+                      width: 60.0,
+                      height: 60.0,
+                      child: Image.asset('asset/icons/icon-play.png'),
+                    ),
+                  ),
                 ],
-              )
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  top: 12.0,
+                  bottom: 28.0,
+                  right: 28.0,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          child: Padding(
+                            padding: const EdgeInsets.all(4.0),
+                            child: Container(
+                              padding: const EdgeInsets.all(4.0),
+                              child: CircleAvatar(
+                                child: Icon(
+                                  Platform.isAndroid
+                                      ? Icons.people
+                                      : CupertinoIcons.group_solid,
+                                  color: Colors.white,
+                                ),
+                                radius: 21.0,
+                                backgroundColor: kCourseElementIconColor,
+                              ),
+                              decoration: BoxDecoration(
+                                color: kBackgroundColor,
+                                borderRadius: BorderRadius.circular(29.0),
+                              ),
+                            ),
+                          ),
+                          width: 58.0,
+                          height: 58.0,
+                          decoration: BoxDecoration(
+                            gradient: widget.course.background,
+                            borderRadius: BorderRadius.circular(29.0),
+                          ),
+                        ),
+                        SizedBox(width: 12.0),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              '28.7k',
+                              style: kTitle2Style,
+                            ),
+                            Text(
+                              'Students',
+                              style: kSearchPlaceholderStyle,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          child: Padding(
+                            padding: const EdgeInsets.all(4.0),
+                            child: Container(
+                              padding: const EdgeInsets.all(4.0),
+                              child: CircleAvatar(
+                                child: Icon(
+                                  Platform.isAndroid
+                                      ? Icons.format_quote
+                                      : CupertinoIcons.news_solid,
+                                  color: Colors.white,
+                                ),
+                                radius: 21.0,
+                                backgroundColor: kCourseElementIconColor,
+                              ),
+                              decoration: BoxDecoration(
+                                color: kBackgroundColor,
+                                borderRadius: BorderRadius.circular(29.0),
+                              ),
+                            ),
+                          ),
+                          width: 58.0,
+                          height: 58.0,
+                          decoration: BoxDecoration(
+                            gradient: widget.course.background,
+                            borderRadius: BorderRadius.circular(29.0),
+                          ),
+                        ),
+                        SizedBox(width: 12.0),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              '12.4k',
+                              style: kTitle2Style,
+                            ),
+                            Text(
+                              'Comments',
+                              style: kSearchPlaceholderStyle,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 28.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.',
+                      style: kBodyLabelStyle,
+                    ),
+                    SizedBox(height: 24.0),
+                    Text(
+                      'About this course',
+                      style: kTitle1Style,
+                    ),
+                    SizedBox(height: 24.0),
+                    Text(
+                      'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
+                      style: kBodyLabelStyle,
+                    ),
+                    SizedBox(height: 24.0),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
